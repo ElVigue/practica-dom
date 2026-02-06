@@ -50,8 +50,9 @@
         document.querySelector("#ej2 .mensaje").textContent = "Texto modificado E2 con querySelector";
 
         // Ejercicio 3
-        const lista = document.querySelector("#ej3 .lista");
-        lista.textContent = "Primer elemento seleccionado";
+        const lista = document.querySelector("#ej3 ");
+        lista.querySelector("li").textContent = "Primer elemento seleccionado";
+
 
         // Ejercicio 4
         const items = document.querySelectorAll("#ej4 .item");
@@ -62,8 +63,10 @@
         // Ejercicio 5
         const contenedor = document.getElementById("ej5_contenedor");
         contenedor.querySelector("h3").textContent = "Título modificado E5";
-        contenedor.querySelectorAll("p")[0].textContent = "Texto modificado E5";
-        contenedor.querySelectorAll("p")[1].textContent = "Texto modificado E5";
+        const parrafos = contenedor.querySelectorAll("p");
+        parrafos[0].textContent = "Texto modificado E5";
+        parrafos[1].textContent = "Texto modificado E5";
+
 
     </script>
 
