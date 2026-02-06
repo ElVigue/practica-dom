@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica DOM</title>
+</head>
+
+<body>
+    <h1>Practica DOM</h1>
+    <section id="ej1">
+        <h2>Ejercicio 1</h2>
+        <p id="ej1_parrafo">Texto original E1</p>
+    </section>
+    <section id="ej2">
+        <h2>Ejercicio 2</h2>
+        <p class="mensaje">Texto original E2</p>
+    </section>
+    <section id="ej3">
+        <h2>Ejercicio 3</h2>
+        <ul class="lista">
+            <li>Elemento 1</li>
+            <li>Elemento 2</li>
+            <li>Elemento 3</li>
+        </ul>
+    </section>
+    <section id="ej4">
+        <h2>Ejercicio 4</h2>
+        <div class="bloques">
+            <span class="item">Item A</span>
+            <span class="item">Item B</span>
+            <span class="item">Item C</span>
+        </div>
+    </section>
+    <section id="ej5">
+        <h2>Ejercicio 5</h2>
+        <div id="ej5_contenedor">
+            <h3>Título original E5</h3>
+            <p>Texto contenedor E5-1</p>
+            <p>Texto contenedor E5-2</p>
+        </div>
+    </section>
+
+    <script>
+        // Ejercicio 1
+        document.getElementById("ej1_parrafo").textContent = "Texto modificado E1";
+
+        // Ejercicio 2
+        document.querySelector("#ej2 .mensaje").textContent = "Texto modificado E2 con querySelector";
+
+        // Ejercicio 3
+        const lista = document.querySelector("#ej3 .lista");
+        lista.textContent = "Primer elemento seleccionado";
+
+        // Ejercicio 4
+        const items = document.querySelectorAll("#ej4 .item");
+        items[0].textContent = "Modificado E4";
+        items[1].textContent = "Modificado E4";
+        items[2].textContent = "Modificado E4";
+
+        // Ejercicio 5
+        const contenedor = document.getElementById("ej5_contenedor");
+        contenedor.querySelector("h3").textContent = "Título modificado E5";
+        contenedor.querySelectorAll("p")[0].textContent = "Texto modificado E5";
+        contenedor.querySelectorAll("p")[1].textContent = "Texto modificado E5";
+
+    </script>
+
+</body>
+
+</html>
